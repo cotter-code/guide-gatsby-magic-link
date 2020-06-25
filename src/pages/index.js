@@ -1,22 +1,47 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState, useEffect } from "react"; // 👈 Add useEffect here!
+// 2️⃣ TODO: Import Cotter
+import Cotter from "cotter"; // 👈 Add Cotter here!
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import "./styles.css";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+const IndexPage = () => {
+  const [responsePayload, setResponsePayload] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  // 3️⃣ TODO: Initialize Cotter and show the form
+  useEffect(() => {
+    var cotter = new Cotter("<YOUR_API_KEY_ID>");
+    cotter.signInWithLink().showEmailForm().then(payload => {
+        setResponsePayload(payload);
+        setLoggedIn(true);
+    });
+  }, []);
+
+  return (
+    <div className="container">
+      <h1 className="title">Passwordless App.</h1>
+
+      {/* 1️⃣ TODO: Setup a div to contain the form */}
+      <div
+        id="cotter-form-container"
+        style={{ width: "300px", height: "200px" }}
+      ></div>
+
+      <div id="user-info">
+        { loggedIn ? `Welcome, ${responsePayload.email}` : "You are not yet authenticated" }
+      </div>
+
+      {
+        loggedIn 
+        ? <div id="user-response">
+          <div className="success">Verification Success</div>
+          <div className="title-response">User info from Cotter:</div>
+          <pre>{JSON.stringify(responsePayload, null, 4)}</pre>
+        </div>
+        : null
+      }
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+  );
+}
 
 export default IndexPage
