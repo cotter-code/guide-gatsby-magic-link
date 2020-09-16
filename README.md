@@ -1,18 +1,21 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+# Add Cotter's magic link to your Gatsby app under 5 minutes
+Follow this [tutorial](https://blog.cotter.app/stop-spending-days-to-code-your-login-page-add-cotters-magic-link-to-your-gatsby-app-under-5-minutes/) to add Cotter's Login Form to your Gatsby website.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
-## 🚀 Quick start
+# Cotter
+
+Cotter is a Passwordless Authentication Service that allows you to quickly add a login form to your website or app. To read more about Cotter, get started with our 📚 integration guides and example projects.
+
+- [Documentation](https://docs.cotter.app)
+- [Quickstart](https://docs.cotter.app/quickstart-guides/all-guides-and-tutorials)
+- [Blog](https://blog.cotter.app/)
+- [Dashboard](https://dev.cotter.app/)
+- [Help](https://help.cotter.app/)
+
+---
+
+## 🚀 Gatsby Quick start
 
 1.  **Create a Gatsby site.**
 
