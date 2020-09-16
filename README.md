@@ -1,6 +1,6 @@
 
 # Add Cotter's magic link to your Gatsby app under 5 minutes
-Follow this [tutorial](https://blog.cotter.app/stop-spending-days-to-code-your-login-page-add-cotters-magic-link-to-your-gatsby-app-under-5-minutes/) to add Cotter's Login Form to your Gatsby website.
+Follow this [tutorial to add Cotter's Login Form to your Gatsby website](https://blog.cotter.app/stop-spending-days-to-code-your-login-page-add-cotters-magic-link-to-your-gatsby-app-under-5-minutes/).
 
 
 # Cotter
